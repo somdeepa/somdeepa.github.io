@@ -1,0 +1,92 @@
+baseURL: "" 
+title: Somdeepa Das
+paginate: 30
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: Home
+          url: 
+          weight: 1 
+        - name: Research
+          url: research/
+          weight: 2
+        - name: Teaching
+          url: teaching/
+          weight: 3 
+        - name: Contact
+          url: contact/
+          weight: 4 
+
+
+params:
+    description: "I am an Associate Professor of Economics in the Daniels School of Business at Purdue.  My fields of specialization are International Trade, Industrial Organization and Applied Econometrics.   I am interested in modeling firm behavior in the global market."
+    author: Somdeepa Das
+    # googleAnalyticsID: "G-XXXXX"
+    DateFormat: "January 2006"
+    defaultTheme: light
+    hideFooter: true
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: false
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    hideSummary: false
+    
+    profileMode:
+          enabled: true
+          title: Somdeepa Das
+          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. I use empirical methods to study topics related to public, health, and labor. Thank you for stopping by."
+          imageUrl: "picture.jpg"
+          imageWidth: 200
+          imageHeight: 200
+          imageTitle: Somdeepa Das
+          buttons:
+           - name: C.V.
+             url: cv/somdeepa_das_cv.pdf
+           - name: Research
+             url: research/
+           - name: Teaching
+             url: teaching/
+           - name: Contact
+             url: contact/
+
+    assets:
+        disableHLJS: true
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: "Somdeepa Das"
+      icon: favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn 
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2

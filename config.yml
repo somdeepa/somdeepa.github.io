@@ -1,4 +1,4 @@
-baseURL: "" 
+baseURL: "https://somdeepa.github.io/" 
 title: Somdeepa Das
 paginate: 30
 theme: PaperMod
@@ -28,7 +28,7 @@ menu:
 params:
     description: "I am a PhD Student in the Economics department of Purdue University. I use empirical methods to study topics related to public, health, and labor."
     author: Somdeepa Das
-    # googleAnalyticsID: "G-XXXXX"
+    googleAnalyticsID: "G-2M7602VJ63"
     DateFormat: "January 2006"
     defaultTheme: light
     hideFooter: true

@@ -20,9 +20,12 @@ menu:
         - name: Teaching
           url: teaching/
           weight: 3 
+        - name: Resources
+          url: resources/
+          weight: 4
         - name: Contact
           url: contact/
-          weight: 4 
+          weight: 5 
 
 
 params:
@@ -53,7 +56,7 @@ params:
     profileMode:
           enabled: true
           title: Somdeepa Das
-          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. I use empirical methods to study topics related to public, health, and labor. Thank you for stopping by."
+          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. I study how policies and institutions shape economic and social outcomes, using large-scale data and empirical methods. My work examines local regulation, collective bargaining, and the expansion of new markets such as sports betting. Thank you for stopping by!"
           imageUrl: "picture.jpg"
           imageWidth: 200
           imageHeight: 200

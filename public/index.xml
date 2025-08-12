@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Anson Soderbery</title>
+    <link>http://localhost:1313/~asoderbe/</link>
+    <description>Recent content on Anson Soderbery</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/~asoderbe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heteroskedastic Supply and Demand Estimation: Analysis and Testing</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/hetero-testing/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/hetero-testing/</guid>
+      <description>Here you will find replication files to estimate import demand and export supply elasticities along with test statistics as produced by Grant and Soderbery (2024).  Estimates are from trade data used by Feenstra and Romalis (2014) spanning 1984-2011 at the SITC 4-digit level.</description>
+    </item>
+    
+    <item>
+      <title>Heteroskedastic Supply and Demand Estimation: Analysis and Testing</title>
+      <link>http://localhost:1313/~asoderbe/research/grant2024/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/grant2024/</guid>
+      <description>The Feenstra (1994) method uses heteroskedasticity to estimate unbiased supply and demand elasticities and is widely used in international trade. We show that assumptions needed for identification are isomorphic to the identification conditions for an IV, and are therefore somewhat stronger than previously believed in order to avoid potential weak instrument problems. We introduce tests to assess whether the assumptions hold true in data, and show using Monte Carlo analysis that application of these tests reduces bias in simulated data. We then apply the tests to elasticity estimates on U.S. imports, and find that import demand and export supply elasticities are substantially lower among goods which pass the tests relative to those which fail.</description>
+    </item>
+    
+    <item>
+      <title>Exporting global warming? Coal trade and the shale gas boom</title>
+      <link>http://localhost:1313/~asoderbe/research/knittel2022exporting/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/knittel2022exporting/</guid>
+      <description>We examine the effect of the US shale gas boom on the international trade and  consumption  of  coal  and  emissions.  We  estimate  a  structural  model  that  links the  domestic  to  the  international  coal  market  and  use  it  to  simulate  counterfactual scenarios. Our results show that the total quantity of coal traded around the world inthe absence of the boom is essentially the same as the actual. Moreover, the change intotal coal consumed worldwide is also small. Although a compositional change towards coal with different heat content could have significant environmental effects, we showthat  this  is  not  the  case  either.  Hence,  US  coal  exports  simply  displaced  other  coal exports without affecting the total $CO_2$ and $SO_2$ emissions. Despite the small overall effects, several countries experience a substantial decrease in their imports of US coaland the associated emissions in the absence of the boom.</description>
+    </item>
+    
+    <item>
+      <title>Trade Restrictiveness Indexes</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/trade-restrictiveness-index/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/trade-restrictiveness-index/</guid>
+      <description>Here you will find Trade Restrictiveness Indexes (TRIs) developed in Soderbery (2021).  Estimates are from ComTrade data over the period 1984-2007 for every country and good trade worldwide. </description>
+    </item>
+    
+    <item>
+      <title>Trade Restrictiveness Indexes and Welfare: A Structural Approach</title>
+      <link>http://localhost:1313/~asoderbe/research/soderbery2021trade/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/soderbery2021trade/</guid>
+      <description>Trade restrictiveness indexes (TRI) have become a staple for practitioners and policy makers to summarize international trade barriers.  TRIs theoretically found a measure of  trade barriers by calculating the uniform tariff that is welfare equivalent to the observed distribution of applied tariffs within a country.</description>
+    </item>
+    
+    <item>
+      <title>From Selling Goods to Selling Services: Firm Responses to Trade Liberalization</title>
+      <link>http://localhost:1313/~asoderbe/research/breinlich2018selling/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/breinlich2018selling/</guid>
+      <description>In this paper we focus on a new channel of adaptation to trade liberalization, namely the shift toward increased provision of services in lieu of goods production. We exploit variation in European Union trade policy to show that lower manufacturing tariffs lead firms to shift into services provision and out of goods production. We also find that a successful transition is associated with higher firm-level R&amp;amp;D stocks.</description>
+    </item>
+    
+    <item>
+      <title>Estimates of Heterogeneous Import Demand and Export Supply Elasticities</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/het-elasticities/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/het-elasticities/</guid>
+      <description>Here you will find import demand and heterogeneous export supply elasticities are produced using a new methodology developed in Soderbery (2018).  Estimates are from ComTrade data over the period 1993-2007 for every country and good trade worldwide.</description>
+    </item>
+    
+    <item>
+      <title>Trade elasticities, heterogeneity, and optimal tariffs</title>
+      <link>http://localhost:1313/~asoderbe/research/soderbery2018trade/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/soderbery2018trade/</guid>
+      <description>We develop a structural estimator for heterogeneous supply and demand in the absence of instrumental variables. Using only readily available bilateral trade data we show how to leverage variation in prices and quantities across multiple markets in order to consistently estimate heterogeneous elasticities. Our elasticity estimates follow intuitive patterns of importer and exporter market power and produce believable distributions and magnitudes. To highlight the flexibility of the estimator, we extend the cornerstone theories of non-cooperative optimal trade policy to a setting where exporters have heterogeneous supply elasticities. Applying our estimates to trade and tariff data worldwide, we show that heterogeneous export supply elasticities provide new avenues for identification. We demonstrate statistically positive and persistent links between non-cooperative optimal tariffs and applied tariffs worldwide.</description>
+    </item>
+    
+    <item>
+      <title>Keeping it fresh: Strategic product redesigns and welfare</title>
+      <link>http://localhost:1313/~asoderbe/research/blonigen2017keeping/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/blonigen2017keeping/</guid>
+      <description>Product redesigns happen across virtually all types of products, yet there is little evidence on the market and welfare effects of redesigns. We develop a model of redesign decisions in a dynamic oligopoly model and use it to analyze redesign activity in the U.S. automobile market. We find automobile model redesigns are frequent despite an estimated average cost around $1 billion. Our estimates also suggest that redesigns lead to large increases in profits and welfare due to the strong preferences consumers have for redesigns. We show that welfare would be improved if redesign competition were reduced, allowing redesign activity to be more responsive to the planned obsolescence channel. The net effect of these changes would reduce total redesigns by roughly 10%, increasing total welfare by roughly 3%. The high valuation that consumers put on newly-designed models drives frequent redesigns and gives automobile manufacturers fairly substantial market power, with a 2-to-1 ratio of firm profits to consumer surplus.</description>
+    </item>
+    
+    <item>
+      <title>Estimating import supply and demand elasticities: Analysis and implications</title>
+      <link>http://localhost:1313/~asoderbe/research/soderbery2015estimating/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/soderbery2015estimating/</guid>
+      <description>Feenstra (1994) developed, and Broda and Weinstein (2006) refined, a structural estimator of import demand and supply elasticities. Working through the first principles of the methodology from Leamer (1981), this paper analyzes and improves the technique to provide a unified estimator of import supply and demand elasticities. The proposed LIML routine corrects small sample biases and constrained search inefficiencies. Previously used estimates are shown to overestimate the median elasticity of substitution by over 35%. Applied to US import data from 1993 to 2007, the biases of the standard estimates translate into an understatement of consumer gains from product variety by a factor of 6. To conclude, I investigate the implications of violations to the underlying assumptions of the model.</description>
+    </item>
+    
+    <item>
+      <title>LIML Estimator for Import Demand and Export Supply Elasticities</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/liml/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/liml/</guid>
+      <description>Here you will find import demand and supply elasticities are produced using the hybrid Feenstra (1994) / Broda &amp;amp; Weinstein (2006) methodology described in Soderbery (2015).  Estimates are from US import data over the period 1993-2007.  The code is written in a general form that allows users to easily adapt the estimator to their data.  One point to note for those using the estimates directly.  The downloadable data impose the constraint that ρ&amp;lt;(σ-1)/σ ex post.  This constraint is violated around 10% of the time by the actual estimates of θ1 and θ2, and can be overcome by recalculating ρ.</description>
+    </item>
+    
+    <item>
+      <title>Market size, structure, and access: Trade with capacity constraints</title>
+      <link>http://localhost:1313/~asoderbe/research/soderbery2014market/</link>
+      <pubDate>Fri, 01 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/soderbery2014market/</guid>
+      <description>This paper develops a model of international trade where firms are heterogeneous across capacity and productivity. A binding capacity constraint induces firms to raise prices in order to take advantage of access to new markets. This generates markets with a flexible competitive structure giving rise to instances where trade and trade liberalization negatively impact welfare. Its key predictions can be identified by observing the presence of small yet highly productive firms and substitution by firms across markets as accessibility evolves. Using Thai firm-level data I establish the prevalence of these anomalous firms and demonstrate they face capacity constraints.</description>
+    </item>
+    
+    <item>
+      <title>Strategic sourcing and wage bargaining</title>
+      <link>http://localhost:1313/~asoderbe/research/sly2014strategic/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/sly2014strategic/</guid>
+      <description>We examine how multinational firms strategically source production to mitigate the consequences of wage bargaining with workers. When wage bargaining pressure differs across countries, firms allocate production of goods with high markups toward countries with relatively competitive labor markets, limiting the rents available to workers with strong bargaining power. We use product-level data from the universe of automotive production facilities in North America at a monthly frequency between 1988 and 2009 to structurally estimate variable price elasticities of demand for different vehicles. From the theory we derive an empirical strategy that allows us to distinguish the impact of wage bargaining pressure from other sourcing motives. We find robust evidence that multinational firms strategically source their products across countries in response to differences in wage bargaining pressure.</description>
+    </item>
+    
+    <item>
+      <title>Investigating the asymptotic properties of import elasticity estimates</title>
+      <link>http://localhost:1313/~asoderbe/research/soderbery2010investigating/</link>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/soderbery2010investigating/</guid>
+      <description>Feenstra (1994) is widely implemented in international trade to estimate elasticities of substitution. Through a Monte Carlo experiment, simulated estimates suggest substantial biases due to weak instruments. However, the derivation of the elasticity of substitution drastically mitigates these biases.</description>
+    </item>
+    
+    <item>
+      <title>Measuring the Benefits of Product Variety with an Accurate Variety Set</title>
+      <link>http://localhost:1313/~asoderbe/research/blonigen2010measuring/</link>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/blonigen2010measuring/</guid>
+      <description>Recent studies have used import data to assess the impact of foreign varieties on domestic prices and welfare. We employ a market-based data set on the U.S. automobile market that allows us to define goods varieties at a more precise level, as well as discern location of production and ownership of varieties. Our estimates of price and welfare changes from new varieties in the U.S. automobile sector are twice as large as standard estimates when using our detailed market-based data. We also show that new varieties introduced by foreign-owned affiliates provided an additional 70% welfare gain during our sample.</description>
+    </item>
+    
+    <item>
+      <title>Contact Information</title>
+      <link>http://localhost:1313/~asoderbe/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/contact/</guid>
+      <description>Mailing and office addresses at Purdue University.</description>
+    </item>
+    
+    <item>
+      <title>Optimal Tariffs and Trade Policy Formation: U.S. Evidence from the Smoot-Hawley Era</title>
+      <link>http://localhost:1313/~asoderbe/research/irwinsoderbery2021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/irwinsoderbery2021/</guid>
+      <description>This paper examines the political economy of U.S. trade policy around the time of the Smoot- Hawley tariff of 1930, a period when policy was unconstrained by trade agreements. We consider a model of politically-optimal trade policy for a large country that can influence its terms of trade and where workers and firms lobby for protection. The predictions of the model hinge on import demand and export supply elasticities, which we estimate using detailed U.S. import data from 1927-35, as well as industry lobbying data. We find that tariff levels are largely determined by firm lobbies, but about about 5 percentage points of the tariffs are explained by terms of trade considerations. Decomposing the politically-optimal tariff in 1931 reveals an intensification of demand for protection by workers in the Smoot-Hawley tariff.</description>
+    </item>
+    
+    <item>
+      <title>Trade Elasticities in General Equilibrium: Demand, Supply, and Aggregation</title>
+      <link>http://localhost:1313/~asoderbe/research/farrokhisoderbery2024/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/research/farrokhisoderbery2024/</guid>
+      <description>We develop a general equilibrium model of international trade that incorporates imperfect factor mobility, product entry, and external returns to scale, into a unified framework.  The effects from these microeconomic channels can be summarized by two composite elasticities that govern supply and aggregation.  We structurally derive export supply and import demand curves, develop a heteroskedastic estimator, and estimate supply, aggregation, and demand elasticities across international product markets. Employing our estimated model, we evaluate the impact of recent US protectionist policies and highlight the importance of our estimates and general equilibrium effects for tariff passthrough rates and cross-industry employment reallocations. Keywords: General equilibrium, Trade, Returns to scale, Labor mobility, Tariff passthrough JEL Classification: F12, F14, F59 </description>
+    </item>
+    
+  </channel>
+</rss>

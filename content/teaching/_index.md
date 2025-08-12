@@ -5,15 +5,18 @@ hideHeader: true
 hideMeta: true
 ---
 
-## Spring 2025
+## Instructor
 
-- Instructor for Principles of Microeconomics (Undergraduate)
+### Purdue University
 
-## Fall 2024
+- Intermediate Microeconomic Theory (Undergraduate), Fall 2025
+- Principles of Microeconomics (Undergraduate), Spring 2025
+- Principles of Microeconomics (Online, Undergraduate)
 
-- TA for Economics and Public Policy (Masters)
-- TA for International Trade (Undergraduate)
+## Teaching Assistant
 
-## Summer 2024
+### Purdue University
 
-- Instructor for Principles of Microeconomics (Online, Undergraduate)
+- Economics and Public Policy (Masters); Fall 2023 and 2024
+- International Trade (Undergraduate); Fall 2022, 2023, and 2024
+- Principles of Microeconomics (Undergraduate); Fall 2022 and Spring 2023

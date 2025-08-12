@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Elasticities on Anson Soderbery</title>
+    <link>http://localhost:1313/~asoderbe/elasticities/</link>
+    <description>Recent content in Elasticities on Anson Soderbery</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/~asoderbe/elasticities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Heteroskedastic Supply and Demand Estimation: Analysis and Testing</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/hetero-testing/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/hetero-testing/</guid>
+      <description>Here you will find replication files to estimate import demand and export supply elasticities along with test statistics as produced by Grant and Soderbery (2024).  Estimates are from trade data used by Feenstra and Romalis (2014) spanning 1984-2011 at the SITC 4-digit level.</description>
+    </item>
+    
+    <item>
+      <title>Trade Restrictiveness Indexes</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/trade-restrictiveness-index/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/trade-restrictiveness-index/</guid>
+      <description>Here you will find Trade Restrictiveness Indexes (TRIs) developed in Soderbery (2021).  Estimates are from ComTrade data over the period 1984-2007 for every country and good trade worldwide. </description>
+    </item>
+    
+    <item>
+      <title>Estimates of Heterogeneous Import Demand and Export Supply Elasticities</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/het-elasticities/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/het-elasticities/</guid>
+      <description>Here you will find import demand and heterogeneous export supply elasticities are produced using a new methodology developed in Soderbery (2018).  Estimates are from ComTrade data over the period 1993-2007 for every country and good trade worldwide.</description>
+    </item>
+    
+    <item>
+      <title>LIML Estimator for Import Demand and Export Supply Elasticities</title>
+      <link>http://localhost:1313/~asoderbe/elasticities/liml/</link>
+      <pubDate>Fri, 01 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/~asoderbe/elasticities/liml/</guid>
+      <description>Here you will find import demand and supply elasticities are produced using the hybrid Feenstra (1994) / Broda &amp;amp; Weinstein (2006) methodology described in Soderbery (2015).  Estimates are from US import data over the period 1993-2007.  The code is written in a general form that allows users to easily adapt the estimator to their data.  One point to note for those using the estimates directly.  The downloadable data impose the constraint that ρ&amp;lt;(σ-1)/σ ex post.  This constraint is violated around 10% of the time by the actual estimates of θ1 and θ2, and can be overcome by recalculating ρ.</description>
+    </item>
+    
+  </channel>
+</rss>

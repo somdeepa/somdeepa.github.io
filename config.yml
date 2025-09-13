@@ -29,7 +29,7 @@ menu:
 
 
 params:
-    description: "Hi there! I am a PhD Student in the Economics department of Purdue University. I study how policies and institutions shape economic and social outcomes, using large-scale data and empirical methods. My work examines local regulation, collective bargaining, and the expansion of new markets such as sports betting. Thank you for stopping by!"
+    description: "Hi there! I am a PhD Student in the Economics department of Purdue University. I study how rules and institutions shape everyday economic life. My projects look at how local alcohol laws affect communities, how unionization influences knowledge workers, and how the rise of sports betting impacts students. Across these areas, I focus on the hidden consequences of regulation and market design. Thank you for stopping by!"
     author: Somdeepa Das
     googleAnalyticsID: "G-2M7602VJ63"
     DateFormat: "January 2006"
@@ -56,7 +56,7 @@ params:
     profileMode:
           enabled: true
           title: Somdeepa Das
-          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. I study how policies and institutions shape economic and social outcomes, using large-scale data and empirical methods. My work examines local regulation, collective bargaining, and the expansion of new markets such as sports betting. Thank you for stopping by!"
+          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. I study how rules and institutions shape everyday economic life. My projects look at how local alcohol laws affect communities, how unionization influences knowledge workers, and how the rise of sports betting impacts students. Across these areas, I focus on the hidden consequences of regulation and market design. Thank you for stopping by!"
           imageUrl: "picture.jpg"
           imageWidth: 200
           imageHeight: 200

@@ -1,9 +1,17 @@
-{{- if or .Params.author site.Params.author }}
-{{- $author := (.Params.author | default site.Params.author) }}
-{{- $author_type := (printf "%T" $author) }}
-{{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
-{{- (delimit $author ",&thinsp;" | safeHTML ) }}
-{{- else }}
-{{- $author }}
-{{- end }}
+{{- /* layouts/partials/author.html */ -}}
+{{- if or .Params.author site.Params.author -}}
+  {{- $author := (.Params.author | default site.Params.author) -}}
+  {{- $type := printf "%T" $author -}}
+
+  {{- if or (eq $type "[]string") (eq $type "[]interface {}") -}}
+    {{- $out := slice -}}
+    {{- range $author -}}
+      {{- /* Render inline markdown (e.g., [Name](url)) without wrapping <p> */ -}}
+      {{- $out = $out | append (. | $.RenderString (dict "display" "inline")) -}}
+    {{- end -}}
+    {{- delimit $out ",&thinsp;" | safeHTML -}}
+  {{- else -}}
+    {{- /* Single author string */ -}}
+    {{- $author | $.RenderString (dict "display" "inline") | safeHTML -}}
+  {{- end -}}
 {{- end -}}

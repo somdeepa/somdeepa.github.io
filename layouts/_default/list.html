@@ -2,14 +2,16 @@
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
-{{- else }} {{/* if not profileMode */}}
+{{- else }}
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>
     {{- if (eq .Kind `term`) }}
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" stroke-width="2" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 14"> <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/> <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/> </svg>&nbsp; {{ .Title }}
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" stroke-width="2" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 14"><path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/><path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/></svg>&nbsp; {{ .Title }}
+    {{- else }}
+    {{ .Title }}
     {{- end}}
     {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
     <a href="index.xml" title="RSS" aria-label="RSS">
@@ -33,11 +35,38 @@
 </div>
 {{- end }}
 
+{{- if eq .Section "research" }}
+{{- $working := where .RegularPages "Params.research_status" "==" "working-paper" }}
+{{- $projects := where .RegularPages "Params.research_status" "==" "project" }}
+
+{{- if gt (len $working) 0 }}
+<section class="research-group">
+  <header class="section-heading">
+    <h2>Working Papers</h2>
+  </header>
+  {{- range sort $working "Weight" "asc" }}
+  {{- partial "research_entry.html" . }}
+  {{- end }}
+</section>
+{{- end }}
+
+{{- if gt (len $projects) 0 }}
+<section class="research-group">
+  <header class="section-heading">
+    <h2>Projects</h2>
+  </header>
+  {{- range sort $projects "Weight" "asc" }}
+  {{- partial "research_entry.html" . }}
+  {{- end }}
+</section>
+{{- end }}
+
+{{- else }}
 {{- $pages := union .RegularPages .Sections }}
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
@@ -46,20 +75,16 @@
 {{- partial "home_info.html" . }}
 {{- end }}
 
-
 {{- if not (.Param "hideHeader") }}
 
 <header class="working_paper">
-	<h2> Working Papers
-	</h2>
-	<br>
+  <h2>Working Papers</h2>
+  <br>
 </header>
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
-
 {{- $class := "post-entry" }}
-
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
@@ -93,16 +118,13 @@
 {{- end }}
 
 <header class="published">
-	<h2> Publications
-	</h2>
-	<br>
+  <h2>Publications</h2>
+  <br>
 </header>
 
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
-
 {{- $class := "post-entry" }}
-
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
@@ -139,9 +161,7 @@
 {{- if (.Param "hideHeader") }}
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
-
 {{- $class := "post-entry" }}
-
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
 {{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
@@ -178,7 +198,7 @@
   <nav class="pagination">
     {{- if $paginator.HasPrev }}
     <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-      «&nbsp;{{ i18n "prev_page" }}&nbsp;
+      &laquo;&nbsp;{{ i18n "prev_page" }}&nbsp;
       {{- if (.Param "ShowPageNums") }}
       {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
       {{- end }}
@@ -189,13 +209,15 @@
       {{- i18n "next_page" }}&nbsp;
       {{- if (.Param "ShowPageNums") }}
       {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
-      {{- end }}&nbsp;»
+      {{- end }}&nbsp;&raquo;
     </a>
     {{- end }}
   </nav>
 </footer>
 {{- end }}
 
-{{- end }}{{/* end profileMode */}}
+{{- end }}
 
-{{- end }}{{- /* end main */ -}}
+{{- end }}
+
+{{- end }}

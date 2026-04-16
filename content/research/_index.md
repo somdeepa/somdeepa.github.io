@@ -1,5 +1,5 @@
 ---
 title: "Research"
-description: "Preprints and articles on this website."
+description: "Working papers and ongoing applied microeconomics projects by Somdeepa Das."
 hideHeader: true
 ---

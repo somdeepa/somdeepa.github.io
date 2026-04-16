@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
 
 body {
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Spectral', serif;
-    font-weight: 600;    
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+code,
+pre,
+kbd {
+    font-family: 'Noto Sans Mono', monospace;
 }
 
 .main {
@@ -19,6 +26,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-header h1 {
     font-size: var(--h1size);
+}
+
+.page-header p {
+    color: var(--secondary);
+    font-size: 1.05rem;
+    margin: 10px 0 0;
+}
+
+.section-heading {
+    margin: 40px 0 18px;
+}
+
+.section-heading h2 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: var(--secondary);
+    margin: 0;
 }
 
 .pagination {
@@ -57,9 +84,6 @@ h1, h2, h3, h4, h5, h6 {
 
 code {
     direction: ltr;
-}
-
-code {
     text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;

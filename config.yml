@@ -1,4 +1,4 @@
-baseURL: "https://somdeepa.github.io/" 
+baseURL: "https://somdeepa.github.io/"
 title: Somdeepa Das
 paginate: 30
 theme: PaperMod
@@ -12,26 +12,32 @@ taxonomies:
 menu:
     main:
         - name: Home
-          url: 
-          weight: 1 
+          url:
+          weight: 1
         - name: Research
           url: research/
           weight: 2
         - name: Teaching
           url: teaching/
-          weight: 3 
-        - name: Resources
-          url: resources/
-          weight: 4
+          weight: 3
         - name: Contact
           url: contact/
-          weight: 5 
-
+          weight: 4
 
 params:
-    description: "Hi there! I am a PhD Student in the Economics department of Purdue University. My research explores how regulation and market design shape everyday life — and the unexpected ways they affect people and communities. Thank you for stopping by!"
+    description: "Somdeepa Das is a PhD student in Economics at Purdue University. Her research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."
     author: Somdeepa Das
     googleAnalyticsID: "G-2M7602VJ63"
+    keywords:
+        - Somdeepa Das
+        - Economics
+        - Purdue University
+        - Applied Microeconomics
+        - Public Economics
+        - Labor Economics
+        - Health Economics
+        - Regulation
+        - Market Design
     DateFormat: "January 2006"
     defaultTheme: light
     hideFooter: true
@@ -52,24 +58,42 @@ params:
     comments: false
     math: true
     hideSummary: false
-    
+    analytics:
+        google:
+            SiteVerificationTag: ""
+    socialIcons:
+        - name: github
+          title: GitHub
+          url: "https://github.com/somdeepa"
+        - name: linkedin
+          title: LinkedIn
+          url: "https://www.linkedin.com/in/somdeepa/"
+    schema:
+        publisherType: Person
+        sameAs:
+            - "https://github.com/somdeepa"
+            - "https://www.linkedin.com/in/somdeepa/"
+    researchList:
+        cardsClickable: false
+
     profileMode:
-          enabled: true
-          title: Somdeepa Das
-          subtitle: "Hi there! I am a PhD Student in the Economics department of Purdue University. My research explores how regulation and market design shape everyday life — and the unexpected ways they affect people and communities. Thank you for stopping by!"
-          imageUrl: "picture.jpg"
-          imageWidth: 200
-          imageHeight: 200
-          imageTitle: Somdeepa Das
-          buttons:
-           - name: C.V.
-             url: cv/somdeepa_das_cv.pdf
-           - name: Research
-             url: research/
-           - name: Teaching
-             url: teaching/
-           - name: Contact
-             url: contact/
+        enabled: true
+        title: Somdeepa Das
+        subtitle: "I am a PhD student in Economics at Purdue University. My research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."
+        researchAgenda: "My current work examines alcohol policy and road safety, collective bargaining in academic labor markets, and a third project in progress that extends my broader agenda on how policy design changes behavior and welfare."
+        marketNote: "I will be on the academic job market in Fall 2026."
+        imageUrl: "picture.jpg"
+        imageWidth: 360
+        imageTitle: Somdeepa Das
+        buttons:
+            - name: C.V.
+              url: cv/somdeepa_das_cv.pdf
+            - name: Research
+              url: research/
+            - name: Teaching
+              url: teaching/
+            - name: Contact
+              url: contact/
 
     assets:
         disableHLJS: true
@@ -78,9 +102,9 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Somdeepa Das"
-      icon: favicon.ico
-      iconHeight: 18
+        text: "Somdeepa Das"
+        icon: favicon.ico
+        iconHeight: 18
 
 markup:
     goldmark:
@@ -88,7 +112,7 @@ markup:
             unsafe: true
     highlight:
         guessSyntax: true
-        style: autumn 
+        style: autumn
     tableOfContents:
         endLevel: 2
         ordered: false

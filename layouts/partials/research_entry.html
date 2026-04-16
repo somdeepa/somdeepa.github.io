@@ -1,0 +1,68 @@
+{{- $page := . -}}
+{{- $cardsClickable := site.Params.researchList.cardsClickable | default false -}}
+{{- $paperResource := $page.Resources.GetMatch "paper.pdf" -}}
+{{- $slidesResource := $page.Resources.GetMatch "slides.pdf" -}}
+{{- $actionLink := "" -}}
+{{- $actionLabel := "" -}}
+
+{{- if $page.Params.paperLink -}}
+    {{- if or (hasPrefix $page.Params.paperLink "http://") (hasPrefix $page.Params.paperLink "https://") (hasPrefix $page.Params.paperLink "/") -}}
+        {{- $actionLink = $page.Params.paperLink -}}
+    {{- else -}}
+        {{- $actionLink = printf "%s%s" $page.RelPermalink $page.Params.paperLink -}}
+    {{- end -}}
+    {{- $actionLabel = "Paper" -}}
+{{- else if $paperResource -}}
+    {{- $actionLink = $paperResource.RelPermalink -}}
+    {{- $actionLabel = "Paper" -}}
+{{- else if eq $page.Params.research_status "working-paper" -}}
+    {{- $actionLink = $page.RelPermalink -}}
+    {{- $actionLabel = "Paper" -}}
+{{- else if $page.Params.slideLink -}}
+    {{- if or (hasPrefix $page.Params.slideLink "http://") (hasPrefix $page.Params.slideLink "https://") (hasPrefix $page.Params.slideLink "/") -}}
+        {{- $actionLink = $page.Params.slideLink -}}
+    {{- else -}}
+        {{- $actionLink = printf "%s%s" $page.RelPermalink $page.Params.slideLink -}}
+    {{- end -}}
+    {{- $actionLabel = "Slides" -}}
+{{- else if $slidesResource -}}
+    {{- $actionLink = $slidesResource.RelPermalink -}}
+    {{- $actionLabel = "Slides" -}}
+{{- end -}}
+
+<article class="post-entry research-entry {{ if $cardsClickable }}is-clickable{{ else }}is-static{{ end }}">
+  {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
+  {{- partial "cover.html" (dict "cxt" $page "IsHome" true "isHidden" $isHidden) }}
+  <header class="entry-header">
+    <h2>
+      {{- $page.Title }}
+      {{- if $page.Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h2>
+  </header>
+  {{- with $page.Params.author }}
+  <div class="entry-authors">
+    {{- range $index, $author := . -}}
+      {{- $authorPlain := $author | markdownify | plainify -}}
+      {{- if gt $index 0 }}, {{ end -}}
+      {{- if eq $authorPlain site.Params.author -}}
+        <span class="entry-author-self">{{ $authorPlain }}</span>
+      {{- else -}}
+        {{- $author | markdownify -}}
+      {{- end -}}
+    {{- end -}}
+  </div>
+  {{- end }}
+  {{- if (ne ($page.Param "hideSummary") true) }}
+  <div class="entry-content">
+    <p>{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+  </div>
+  {{- end }}
+  {{- if $actionLink }}
+  <div class="entry-actions">
+    <a class="entry-action" href="{{ $actionLink }}">{{ $actionLabel }}</a>
+  </div>
+  {{- end }}
+  {{- if $cardsClickable }}
+  <a class="entry-link" aria-label="post link to {{ $page.Title | plainify }}" href="{{ $page.Permalink }}"></a>
+  {{- end }}
+</article>

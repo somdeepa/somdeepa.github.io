@@ -79,8 +79,8 @@ params:
     profileMode:
         enabled: true
         title: Somdeepa Das
-        subtitle: "I am a PhD student in Economics at Purdue University. My research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."
-        researchAgenda: "My current work examines alcohol policy and road safety, collective bargaining in academic labor markets, and a third project in progress that extends my broader agenda on how policy design changes behavior and welfare."
+        subtitle: "I am a PhD student in Economics at Purdue University. I work in applied microeconomics, with interests in labor economics and public economics. Thank you for stopping by!"
+        researchAgenda: "My current work focuses on **collective bargaining** in academia, examining how unionization shapes wages, mobility, and research productivity among academics. In related projects, I study how **alcohol access** affects traffic safety and how **legalized sports betting** influences student outcomes and responses to labor market shocks, as part of a broader agenda on how changes in access and incentives translate into behavior and welfare."
         marketNote: "I will be on the academic job market in Fall 2026."
         imageUrl: "picture.jpg"
         imageWidth: 360

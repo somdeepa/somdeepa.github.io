@@ -35,11 +35,11 @@
 {{- $abstractHTML = replaceRE "(?s)^\\s*<h5[^>]*>Abstract</h5>\\s*" "" $abstractHTML -}}
 {{- $abstractText = ($abstractHTML | plainify | htmlUnescape) -}}
 {{- if not ($abstractText | strings.TrimSpace) -}}
-    {{- with $page.Description -}}
-        {{- $abstractText = (. | markdownify | plainify | htmlUnescape) -}}
+    {{- if $page.Description -}}
+        {{- $abstractText = ($page.Description | markdownify | plainify | htmlUnescape) -}}
         {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
-    {{- else with $page.Params.summary -}}
-        {{- $abstractText = (. | markdownify | plainify | htmlUnescape) -}}
+    {{- else if $page.Params.summary -}}
+        {{- $abstractText = ($page.Params.summary | markdownify | plainify | htmlUnescape) -}}
         {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
     {{- else -}}
         {{- $abstractText = ($page.Summary | plainify | htmlUnescape) -}}

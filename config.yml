@@ -62,6 +62,9 @@ params:
         google:
             SiteVerificationTag: ""
     socialIcons:
+        - name: google scholar
+          title: Google Scholar
+          url: "https://scholar.google.com/citations?user=2FmPRCgAAAAJ&hl=en"
         - name: github
           title: GitHub
           url: "https://github.com/somdeepa"
@@ -71,6 +74,7 @@ params:
     schema:
         publisherType: Person
         sameAs:
+            - "https://scholar.google.com/citations?user=2FmPRCgAAAAJ&hl=en"
             - "https://github.com/somdeepa"
             - "https://www.linkedin.com/in/somdeepa/"
     researchList:

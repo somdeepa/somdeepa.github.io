@@ -34,7 +34,8 @@
 {{- $abstractHTML = replaceRE "(?s)^\\s*<hr>\\s*" "" $abstractHTML -}}
 {{- $abstractHTML = replaceRE "(?s)^\\s*<h5[^>]*>Abstract</h5>\\s*" "" $abstractHTML -}}
 {{- $abstractText = ($abstractHTML | plainify | htmlUnescape) -}}
-{{- if not ($abstractText | strings.TrimSpace) -}}
+{{- $abstractTextTrimmed := replaceRE "^\\s+|\\s+$" "" $abstractText -}}
+{{- if not $abstractTextTrimmed -}}
     {{- if $page.Description -}}
         {{- $abstractText = ($page.Description | markdownify | plainify | htmlUnescape) -}}
         {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
@@ -49,6 +50,7 @@
         {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
     {{- end -}}
 {{- end -}}
+{{- $abstractTextTrimmed = replaceRE "^\\s+|\\s+$" "" $abstractText -}}
 
 <article class="post-entry research-entry {{ if $cardsClickable }}is-clickable{{ else }}is-static{{ end }}">
   {{- $isHidden := (site.Params.cover.hidden | default site.Params.cover.hiddenInList) }}
@@ -75,7 +77,7 @@
   {{- with $page.Params.publication_status }}
   <div class="entry-publication-status">{{ . | markdownify }}</div>
   {{- end }}
-  {{- if and (ne ($page.Param "hideSummary") true) ($abstractText | strings.TrimSpace) }}
+  {{- if and (ne ($page.Param "hideSummary") true) $abstractTextTrimmed }}
   <details class="entry-abstract">
     <summary>
       <span class="entry-abstract-toggle" aria-hidden="true">

@@ -36,13 +36,25 @@
 {{- end }}
 
 {{- if eq .Section "research" }}
+{{- $jmp := where .RegularPages "Params.research_status" "==" "job-market-paper" }}
 {{- $working := where .RegularPages "Params.research_status" "==" "working-paper" }}
 {{- $projects := where .RegularPages "Params.research_status" "==" "project" }}
+
+{{- if gt (len $jmp) 0 }}
+<section class="research-group">
+  <header class="section-heading">
+    <h2>Job Market Paper</h2>
+  </header>
+  {{- range sort $jmp "Weight" "asc" }}
+  {{- partial "research_entry.html" . }}
+  {{- end }}
+</section>
+{{- end }}
 
 {{- if gt (len $working) 0 }}
 <section class="research-group">
   <header class="section-heading">
-    <h2>Working Papers</h2>
+    <h2>Working Paper</h2>
   </header>
   {{- range sort $working "Weight" "asc" }}
   {{- partial "research_entry.html" . }}
@@ -53,7 +65,7 @@
 {{- if gt (len $projects) 0 }}
 <section class="research-group">
   <header class="section-heading">
-    <h2>Projects</h2>
+    <h2>Works in Progress</h2>
   </header>
   {{- range sort $projects "Weight" "asc" }}
   {{- partial "research_entry.html" . }}

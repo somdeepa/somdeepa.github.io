@@ -2,32 +2,52 @@
 {{- $cardsClickable := site.Params.researchList.cardsClickable | default false -}}
 {{- $paperResource := $page.Resources.GetMatch "paper.pdf" -}}
 {{- $slidesResource := $page.Resources.GetMatch "slides.pdf" -}}
-{{- $actionLink := "" -}}
-{{- $actionLabel := "" -}}
+{{- $paperLink := "" -}}
+{{- $slidesLink := "" -}}
+{{- $abstractText := "" -}}
+{{- $abstractHTML := "" -}}
 
 {{- if $page.Params.paperLink -}}
     {{- if or (hasPrefix $page.Params.paperLink "http://") (hasPrefix $page.Params.paperLink "https://") (hasPrefix $page.Params.paperLink "/") -}}
-        {{- $actionLink = $page.Params.paperLink -}}
+        {{- $paperLink = $page.Params.paperLink -}}
     {{- else -}}
-        {{- $actionLink = printf "%s%s" $page.RelPermalink $page.Params.paperLink -}}
+        {{- $paperLink = printf "%s%s" $page.RelPermalink $page.Params.paperLink -}}
     {{- end -}}
-    {{- $actionLabel = "Paper" -}}
 {{- else if $paperResource -}}
-    {{- $actionLink = $paperResource.RelPermalink -}}
-    {{- $actionLabel = "Paper" -}}
+    {{- $paperLink = $paperResource.RelPermalink -}}
 {{- else if eq $page.Params.research_status "working-paper" -}}
-    {{- $actionLink = $page.RelPermalink -}}
-    {{- $actionLabel = "Paper" -}}
-{{- else if $page.Params.slideLink -}}
+    {{- $paperLink = $page.RelPermalink -}}
+{{- end -}}
+
+{{- if $page.Params.slideLink -}}
     {{- if or (hasPrefix $page.Params.slideLink "http://") (hasPrefix $page.Params.slideLink "https://") (hasPrefix $page.Params.slideLink "/") -}}
-        {{- $actionLink = $page.Params.slideLink -}}
+        {{- $slidesLink = $page.Params.slideLink -}}
     {{- else -}}
-        {{- $actionLink = printf "%s%s" $page.RelPermalink $page.Params.slideLink -}}
+        {{- $slidesLink = printf "%s%s" $page.RelPermalink $page.Params.slideLink -}}
     {{- end -}}
-    {{- $actionLabel = "Slides" -}}
 {{- else if $slidesResource -}}
-    {{- $actionLink = $slidesResource.RelPermalink -}}
-    {{- $actionLabel = "Slides" -}}
+    {{- $slidesLink = $slidesResource.RelPermalink -}}
+{{- end -}}
+
+{{- $abstractHTML = $page.Content -}}
+{{- $abstractHTML = replaceRE "(?s)^\\s*<hr>\\s*<h4[^>]*>Download</h4>\\s*<ul>.*?</ul>\\s*<hr>\\s*" "" $abstractHTML -}}
+{{- $abstractHTML = replaceRE "(?s)^\\s*<hr>\\s*" "" $abstractHTML -}}
+{{- $abstractHTML = replaceRE "(?s)^\\s*<h5[^>]*>Abstract</h5>\\s*" "" $abstractHTML -}}
+{{- $abstractText = ($abstractHTML | plainify | htmlUnescape) -}}
+{{- if not ($abstractText | strings.TrimSpace) -}}
+    {{- with $page.Description -}}
+        {{- $abstractText = (. | markdownify | plainify | htmlUnescape) -}}
+        {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
+    {{- else with $page.Params.summary -}}
+        {{- $abstractText = (. | markdownify | plainify | htmlUnescape) -}}
+        {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
+    {{- else -}}
+        {{- $abstractText = ($page.Summary | plainify | htmlUnescape) -}}
+        {{- if $page.Truncated -}}
+            {{- $abstractText = printf "%s..." $abstractText -}}
+        {{- end -}}
+        {{- $abstractHTML = printf "<p>%s</p>" $abstractText -}}
+    {{- end -}}
 {{- end -}}
 
 <article class="post-entry research-entry {{ if $cardsClickable }}is-clickable{{ else }}is-static{{ end }}">
@@ -52,14 +72,28 @@
     {{- end -}}
   </div>
   {{- end }}
-  {{- if (ne ($page.Param "hideSummary") true) }}
-  <div class="entry-content">
-    <p>{{ $page.Summary | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
-  </div>
+  {{- with $page.Params.publication_status }}
+  <div class="entry-publication-status">{{ . | markdownify }}</div>
   {{- end }}
-  {{- if $actionLink }}
+  {{- if and (ne ($page.Param "hideSummary") true) ($abstractText | strings.TrimSpace) }}
+  <details class="entry-abstract">
+    <summary>
+      <span class="entry-abstract-toggle" aria-hidden="true">
+        <span class="entry-abstract-more">Show abstract</span>
+        <span class="entry-abstract-less">Hide abstract</span>
+      </span>
+    </summary>
+    <div class="entry-abstract-text">{{ $abstractHTML | safeHTML }}</div>
+  </details>
+  {{- end }}
+  {{- if or $paperLink $slidesLink }}
   <div class="entry-actions">
-    <a class="entry-action" href="{{ $actionLink }}">{{ $actionLabel }}</a>
+    {{- if $paperLink }}
+    <a class="entry-action" href="{{ $paperLink }}">Paper</a>
+    {{- end }}
+    {{- if $slidesLink }}
+    <a class="entry-action" href="{{ $slidesLink }}">Slides</a>
+    {{- end }}
   </div>
   {{- end }}
   {{- if $cardsClickable }}

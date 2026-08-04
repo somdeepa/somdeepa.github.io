@@ -35,21 +35,47 @@
         </div>
         {{- end }}
         <div class="profile_copy">
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
+        <h1>
+            <span class="profile-title-name">{{ .title | default site.Title | markdownify }}</span>
+        </h1>
         {{- with .subtitle }}
         <p class="profile-lead">{{ . | markdownify }}</p>
+        {{- end }}
+        {{- with .fields }}
+        <p class="profile-fields">{{ . | markdownify }}</p>
         {{- end }}
         {{- with .researchAgenda }}
         <p class="profile-agenda">{{ . | markdownify }}</p>
         {{- end }}
-        {{- with .marketNote }}
-        <p class="profile-market">{{ . | markdownify }}</p>
+        {{- with .jobMarketPaper }}
+        {{- $jmp := . -}}
+        <article class="post-entry research-entry profile-jmp">
+            <div class="profile-jmp-label">Job Market Paper</div>
+            <header class="entry-header">
+                <h2>
+                    {{- if .url -}}
+                    <a href="{{ trim .url " " }}">{{ .title | markdownify }}</a>
+                    {{- else -}}
+                    {{ .title | markdownify }}
+                    {{- end -}}
+                </h2>
+            </header>
+            {{- with .slidesLabel }}
+            <div class="entry-actions">
+                {{- if $jmp.slidesUrl -}}
+                <a class="entry-action" href="{{ trim $jmp.slidesUrl " " }}">{{ . }}</a>
+                {{- else -}}
+                <span class="entry-action entry-action-placeholder" aria-disabled="true">{{ . }}</span>
+                {{- end -}}
+            </div>
+            {{- end }}
+        </article>
         {{- end }}
-        {{- partial "social_icons.html" (dict "align" "center") -}}
 
         {{- with .buttons }}
         <div class="buttons">
             {{- range . }}
+            {{- if .url }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
                 <span class="button-inner">
                     {{ .name }}
@@ -62,6 +88,21 @@
                     </svg>
                     {{- end }}
                 </span>
+            </a>
+            {{- else }}
+            <span class="button button-placeholder" aria-disabled="true" title="{{ .name }}">
+                <span class="button-inner">{{ .name }}</span>
+            </span>
+            {{- end }}
+            {{- end }}
+        </div>
+        {{- end }}
+        {{- with site.Params.socialIcons }}
+        <div class="profile-social-links" aria-label="Social links">
+            {{- range $index, $item := . -}}
+            {{- if gt $index 0 }}<span aria-hidden="true">|</span>{{ end -}}
+            <a href="{{ trim $item.url " " | safeURL }}" target="_blank" rel="noopener noreferrer me">
+                {{- $item.title | default $item.name | title -}}
             </a>
             {{- end }}
         </div>

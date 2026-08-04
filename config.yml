@@ -20,12 +20,12 @@ menu:
         - name: Teaching
           url: teaching/
           weight: 3
-        - name: Contact
-          url: contact/
+        - name: About
+          url: about/
           weight: 4
 
 params:
-    description: "Somdeepa Das is a PhD student in Economics at Purdue University. Her research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."
+    description: "Somdeepa Das is a PhD Candidate in Economics at Purdue University. Her research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."
     author: Somdeepa Das
     googleAnalyticsID: "G-2M7602VJ63"
     keywords:
@@ -79,31 +79,42 @@ params:
     profileMode:
         enabled: true
         title: Somdeepa Das
-        subtitle: "I am a PhD student in Economics at Purdue University. I work in applied microeconomics, with interests in labor economics and public economics. Thank you for stopping by!"
-        researchAgenda: "My current work focuses on **collective bargaining** in academia, examining how unionization shapes wages, mobility, and research productivity among academics. In related projects, I study how **alcohol access** affects traffic safety and how **legalized sports betting** influences student outcomes and responses to labor market shocks, as part of a broader agenda on how changes in access and incentives translate into behavior and welfare."
-        marketNote: "I will be on the academic job market in Fall 2026."
+        subtitle: "PhD Candidate in Economics | Purdue University"
+        fields: "**Fields:** Applied Microeconomics | Labor Economics | Public Economics"
+        researchAgenda: "I study how institutions and policies shape economic outcomes. My research focuses on labor markets, collective bargaining, and how changes in access and incentives affect individual behavior and welfare. Thank you for stopping by!"
+        jobMarketPaper:
+            title: "Science under collective bargaining: How unionization shapes academic labor markets and research productivity"
+            url:
+            slidesLabel: Slides
+            slidesUrl: research/unionization-universities/slides.pdf
         imageUrl: "picture.jpg"
         imageWidth: 360
         imageTitle: Somdeepa Das
         buttons:
-            - name: C.V.
+            - name: CV
               url: cv/somdeepa_das_cv.pdf
             - name: Research
               url: research/
             - name: Teaching
               url: teaching/
-            - name: Contact
-              url: contact/
+            - name: About
+              url: about/
 
     assets:
         disableHLJS: true
         disableScrollBarStyle: true
+        favicon: sd-favicon.ico
+        favicon16x16: sd-favicon-16x16.png
+        favicon32x32: sd-favicon-32x32.png
+        apple_touch_icon: sd-apple-touch-icon.png
+        theme_color: "#fffdfa"
+        msapplication_TileColor: "#fffdfa"
     cover:
         hiddenInList: false
         hiddenInSingle: true
     label:
         text: "Somdeepa Das"
-        icon: favicon.ico
+        icon: sd-favicon-32x32.png
         iconHeight: 18
 
 markup:

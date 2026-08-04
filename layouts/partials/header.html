@@ -65,7 +65,7 @@
                         height="{{- site.Params.label.iconHeight | default "30" -}}"
                         width="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- else }}
-                <img src="{{- site.Params.label.icon | absURL -}}" alt="" aria-label="logo"
+                <img src="{{- site.Params.label.icon | relURL -}}" alt="" aria-label="logo"
                     height="{{- site.Params.label.iconHeight | default "30" -}}"
                     width="{{- site.Params.label.iconHeight | default "30" -}}">
                 {{- end -}}
@@ -100,10 +100,9 @@
                 {{- end }}
 
                 {{- $lang := .Lang}}
-                {{- $separator := or $label_text (not site.Params.disableThemeToggle)}}
                 {{- with site.Home.AllTranslations }}
+                {{- if gt (len .) 1 }}
                 <ul class="lang-switch">
-                    {{- if $separator }}<li>|</li>{{ end }}
                     {{- range . -}}
                     {{- if ne $lang .Lang }}
                     <li>
@@ -119,6 +118,7 @@
                     {{- end -}}
                     {{- end}}
                 </ul>
+                {{- end }}
                 {{- end }}
             </div>
         </div>

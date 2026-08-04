@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="SD">
+  <rect width="512" height="512" rx="112" fill="#fffdfa"/>
+  <rect x="34" y="34" width="444" height="444" rx="86" fill="none" stroke="#1f1f1b" stroke-width="30"/>
+  <text x="256" y="296"
+        fill="#1f1f1b"
+        font-family="Cormorant Garamond, Georgia, Times New Roman, serif"
+        font-size="222"
+        font-weight="600"
+        letter-spacing="-14"
+        text-anchor="middle"
+        dominant-baseline="middle">SD</text>
+</svg>

@@ -88,13 +88,16 @@
     <div class="entry-abstract-text">{{ $abstractHTML | safeHTML }}</div>
   </details>
   {{- end }}
-  {{- if or $paperLink $slidesLink }}
+  {{- if or $paperLink $slidesLink $page.Params.catoBriefLink }}
   <div class="entry-actions">
     {{- if $paperLink }}
     <a class="entry-action" href="{{ $paperLink }}">Paper</a>
     {{- end }}
     {{- if $slidesLink }}
     <a class="entry-action" href="{{ $slidesLink }}">Slides</a>
+    {{- end }}
+    {{- with $page.Params.catoBriefLink }}
+    <a class="entry-action" href="{{ . }}">Cato Brief</a>
     {{- end }}
   </div>
   {{- end }}

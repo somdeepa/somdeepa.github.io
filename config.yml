@@ -14,15 +14,18 @@ menu:
         - name: Home
           url:
           weight: 1
+        - name: CV
+          url: cv/somdeepa_das_cv.pdf
+          weight: 2
         - name: Research
           url: research/
-          weight: 2
+          weight: 3
         - name: Teaching
           url: teaching/
-          weight: 3
+          weight: 4
         - name: About
           url: about/
-          weight: 4
+          weight: 5
 
 params:
     description: "Somdeepa Das is a PhD Candidate in Economics at Purdue University. Her research in applied microeconomics studies how policy, regulation, and institutions shape labor markets, public health, and everyday economic outcomes."

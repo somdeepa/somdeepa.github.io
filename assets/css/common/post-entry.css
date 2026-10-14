@@ -134,6 +134,7 @@
 .research-entry:hover,
 .research-entry.is-static:hover {
     background: #fffdfa;
+    border-width: 2px;
     border-color: #1f1f1b;
     box-shadow: 10px 10px 0 var(--accent), 0 18px 38px rgba(31, 31, 27, 0.1);
     transform: translate(-2px, -2px);

@@ -100,13 +100,14 @@ h6 {
 .profile-jmp {
     width: calc(100% + 24px);
     margin: 2px -12px 4px;
-    padding: 12px 8px;
+    padding: 16px 24px;
     text-align: center;
     box-shadow: 4px 4px 0 var(--accent), 0 10px 24px rgba(31, 31, 27, 0.06);
 }
 
 .profile-jmp:hover {
     background: #fffdfa;
+    border-width: 2px;
     border-color: #1f1f1b;
     box-shadow: 4px 4px 0 var(--accent), 0 10px 24px rgba(31, 31, 27, 0.06);
     transform: none;
@@ -209,11 +210,19 @@ h6 {
     box-shadow: 5px 5px 0 #1f1f1b;
 }
 
+.post-content .teaching-intro-block {
+    margin: 0 0 34px;
+}
+
 .post-content .teaching-intro {
-    margin: 0 0 var(--gap);
+    margin: 0;
     color: var(--content);
     font-size: 1rem;
     line-height: 1.65;
+}
+
+.post-content .teaching-intro-actions {
+    margin-top: 8px;
 }
 
 .post-content .teaching-card {
@@ -251,7 +260,22 @@ h6 {
 }
 
 .post-content .teaching-card table {
+    width: 100%;
+    max-width: none;
+    table-layout: fixed;
     margin: 0;
+}
+
+.post-content .teaching-card .teaching-col-course {
+    width: 42%;
+}
+
+.post-content .teaching-card .teaching-col-secondary {
+    width: 20%;
+}
+
+.post-content .teaching-card .teaching-col-detail {
+    width: 38%;
 }
 
 .post-content .teaching-card table th,
@@ -262,7 +286,7 @@ h6 {
 .post-content .teaching-button {
     display: inline-flex;
     align-items: center;
-    margin-top: 16px;
+    margin: 0;
     padding: 8px 13px;
     border-radius: 10px;
     border: 2px solid #1f1f1b;
@@ -271,46 +295,68 @@ h6 {
     box-shadow: 4px 4px 0 #1f1f1b;
     font-size: 0.94rem;
     font-weight: 600;
+    text-decoration: none;
+    transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.post-content .teaching-button:hover {
+    background: var(--accent-soft);
+    border-color: #1f1f1b;
+    box-shadow: 6px 6px 0 #1f1f1b;
+    transform: translate(-1px, -1px);
 }
 
 .post-content .teaching-material-links {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 10px 16px;
     margin-top: 4px;
 }
 
-.post-content .teaching-material-links a {
-    color: var(--secondary);
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: none;
-}
-
-.post-content .teaching-material-links a:hover {
-    color: var(--accent-deep);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    box-shadow: none;
-}
-
-.post-content .teaching-course-columns {
+.post-content .teaching-course-groups {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    gap: 0;
 }
 
-.post-content .teaching-course-columns h3 {
-    margin-top: 0;
+.post-content .teaching-course-group {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 18px;
+    padding: 16px 0;
 }
 
-.post-content .teaching-course-columns ul {
+.post-content .teaching-course-group + .teaching-course-group {
+    border-top: 1px solid var(--border);
+}
+
+.post-content .teaching-course-group h3 {
     margin: 0;
-    padding-inline-start: 18px;
+    font-size: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-weight: 600;
 }
 
-.post-content .teaching-course-columns li {
-    margin-top: 4px;
+.post-content .teaching-course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-content .teaching-course-list li {
+    margin: 0;
+    color: var(--content);
+    line-height: 1.7;
+}
+
+.post-content .teaching-course-list li:not(:last-child)::after {
+    content: " · ";
+    margin: 0 7px;
+    color: var(--gray);
 }
 
 .post-content .teaching-button-placeholder {
@@ -459,8 +505,8 @@ h6 {
         justify-content: center;
     }
 
-    .post-content .teaching-course-columns {
+    .post-content .teaching-course-group {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 4px;
     }
 }

@@ -5,49 +5,77 @@ hideHeader: true
 hideMeta: true
 ---
 
-<p class="teaching-intro">My teaching experience includes undergraduate courses in introductory and intermediate microeconomics. In my in-person instruction, I use a combination of worked examples, end-of-class Sheets, and classroom activities to help students actively apply economic concepts, strengthen their intuition, and connect economic models to real-world questions.</p>
+<div class="teaching-intro-block">
+  <p class="teaching-intro">I help students make economic ideas concrete through familiar examples, active practice, and clear connections across topics. Students test their reasoning through discussion, live demonstrations, and short in-class Sheets that ask them to apply what they have just learned.</p>
+  <div class="teaching-intro-actions">
+    <a class="teaching-button" href="/teaching/TeachingStatement_draft.pdf">Teaching Statement</a>
+  </div>
+</div>
 
 <section class="teaching-card">
   <h2>Teaching Experience</h2>
   <p class="teaching-context">Purdue University</p>
+  <h3>Instructor of Record</h3>
   <table>
+    <colgroup>
+      <col class="teaching-col-course">
+      <col class="teaching-col-secondary">
+      <col class="teaching-col-detail">
+    </colgroup>
     <thead>
       <tr>
         <th>Course</th>
         <th>Term</th>
-        <th>Role</th>
+        <th>Format and Enrollment</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Intermediate Microeconomic Theory (Undergraduate)</td>
+        <td>Intermediate Microeconomic Theory</td>
         <td>Fall 2025</td>
-        <td>Instructor</td>
+        <td>In person, 56 students</td>
       </tr>
       <tr>
-        <td>Principles of Microeconomics (Undergraduate)</td>
+        <td>Principles of Microeconomics</td>
         <td>Spring 2025</td>
-        <td>Instructor</td>
+        <td>In person, 58 students</td>
       </tr>
       <tr>
-        <td>Principles of Microeconomics (Online, Undergraduate)</td>
+        <td>Principles of Microeconomics</td>
         <td>Summer 2024</td>
-        <td>Instructor</td>
+        <td>Online, 58 students</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Teaching Assistant</h3>
+  <table>
+    <colgroup>
+      <col class="teaching-col-course">
+      <col class="teaching-col-secondary">
+      <col class="teaching-col-detail">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th>Level</th>
+        <th>Terms</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Economics and Public Policy</td>
+        <td>Master’s</td>
+        <td>Fall 2023, Fall 2024, Fall 2026</td>
       </tr>
       <tr>
-        <td>Economics and Public Policy (Masters)</td>
-        <td>Fall 2023, Fall 2024</td>
-        <td>Teaching Assistant</td>
-      </tr>
-      <tr>
-        <td>International Trade (Undergraduate)</td>
+        <td>International Trade</td>
+        <td>Undergraduate</td>
         <td>Fall 2022, Fall 2023, Fall 2024</td>
-        <td>Teaching Assistant</td>
       </tr>
       <tr>
-        <td>Principles of Microeconomics (Undergraduate)</td>
+        <td>Principles of Microeconomics</td>
+        <td>Undergraduate</td>
         <td>Fall 2022, Spring 2023</td>
-        <td>Teaching Assistant</td>
       </tr>
     </tbody>
   </table>
@@ -55,10 +83,10 @@ hideMeta: true
 
 <section class="teaching-card">
   <h2>Courses Prepared To Teach</h2>
-  <div class="teaching-course-columns">
-    <div>
+  <div class="teaching-course-groups">
+    <section class="teaching-course-group teaching-course-group-undergraduate">
       <h3>Undergraduate</h3>
-      <ul>
+      <ul class="teaching-course-list">
         <li>Principles of Microeconomics</li>
         <li>Principles of Macroeconomics</li>
         <li>Intermediate Microeconomic Theory</li>
@@ -67,13 +95,13 @@ hideMeta: true
         <li>Economics of Public Policy</li>
         <li>Labor Economics</li>
       </ul>
-    </div>
-    <div>
+    </section>
+    <section class="teaching-course-group teaching-course-group-graduate">
       <h3>Graduate</h3>
-      <ul>
+      <ul class="teaching-course-list">
         <li>Causal Inference and Program Evaluation</li>
       </ul>
-    </div>
+    </section>
   </div>
 </section>
 
@@ -83,8 +111,8 @@ hideMeta: true
 
   <h3>Selected Examples</h3>
   <div class="teaching-material-links">
-    <a href="/teaching/sheets/Sheet%206.pdf">Revealed Preference and Consumer Choice (WARP)</a>
-    <a href="/teaching/sheets/Sheet%2022.pdf">Moral Hazard and Incentives</a>
+    <a class="teaching-button" href="/teaching/sheets/Sheet%206.pdf">Example 1</a>
+    <a class="teaching-button" href="/teaching/sheets/Sheet%2022.pdf">Example 2</a>
   </div>
 
   <h3>Selected Student Feedback</h3>

@@ -90,7 +90,7 @@ params:
         fields: "**Fields:** Applied Microeconomics | Labor Economics | Public Economics"
         researchAgenda: "I study how institutions and policies shape economic outcomes. My research focuses on labor markets, collective bargaining, and how changes in access and incentives affect individual behavior and welfare. Thank you for stopping by!"
         jobMarketPaper:
-            title: "Science under collective bargaining: How unionization shapes academic labor markets and research productivity"
+            title: "What Do Unions Do for Professionals? Evidence from Faculty Unionization in U.S. Higher Education"
             url:
             paperLabel: Paper
             paperUrl: research/unionization-universities/paper.pdf

@@ -61,18 +61,15 @@
       {{- if $page.Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h2>
   </header>
-  {{- with $page.Params.author }}
-  <div class="entry-authors">
-    {{- range $index, $author := . -}}
-      {{- $authorPlain := $author | markdownify | plainify -}}
-      {{- if gt $index 0 }}, {{ end -}}
-      {{- if eq $authorPlain site.Params.author -}}
-        <span class="entry-author-self">{{ $authorPlain }}</span>
-      {{- else -}}
-        {{- $author | markdownify -}}
-      {{- end -}}
+  {{- $coauthors := slice -}}
+  {{- range $page.Params.author -}}
+    {{- $authorPlain := . | markdownify | plainify -}}
+    {{- if ne $authorPlain site.Params.author -}}
+      {{- $coauthors = $coauthors | append . -}}
     {{- end -}}
-  </div>
+  {{- end -}}
+  {{- with $coauthors }}
+  <div class="entry-authors">with {{ range $index, $author := . }}{{ if gt $index 0 }}, {{ end }}{{ $author | markdownify }}{{ end }}</div>
   {{- end }}
   {{- with $page.Params.publication_status }}
   <div class="entry-publication-status">{{ . | markdownify }}</div>

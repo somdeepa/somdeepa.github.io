@@ -5,6 +5,7 @@ author: ["Somdeepa Das", "[Jian Qi Tan](https://www.jaytanjianqi.net/)"]
 description: "This project estimates the causal effects of faculty unionization on wages, employment, and research productivity across academic ranks in U.S. higher education, using staggered difference-in-differences designs and state-level variation in collective bargaining and right-to-work laws."
 summary: "This project estimates the causal effects of faculty unionization on wages, employment, and research productivity across academic ranks in U.S. higher education, using staggered difference-in-differences designs and state-level variation in collective bargaining and right-to-work laws."
 research_status: job-market-paper
+showSlides: false
 weight: 1
 
 editPost:

@@ -60,12 +60,21 @@
                     {{- end -}}
                 </h2>
             </header>
-            {{- with .slidesLabel }}
+            {{- with .paperLabel }}
             <div class="entry-actions">
-                {{- if $jmp.slidesUrl -}}
-                <a class="entry-action" href="{{ trim $jmp.slidesUrl " " }}">{{ . }}</a>
+                {{- if $jmp.paperUrl -}}
+                <a class="entry-action" href="{{ trim $jmp.paperUrl " " }}">{{ . }}</a>
                 {{- else -}}
                 <span class="entry-action entry-action-placeholder" aria-disabled="true">{{ . }}</span>
+                {{- end -}}
+            </div>
+            {{- end }}
+            {{- if and .slidesLabel ($jmp.showSlides | default false) }}
+            <div class="entry-actions">
+                {{- if $jmp.slidesUrl -}}
+                <a class="entry-action" href="{{ trim $jmp.slidesUrl " " }}">{{ $jmp.slidesLabel }}</a>
+                {{- else -}}
+                <span class="entry-action entry-action-placeholder" aria-disabled="true">{{ $jmp.slidesLabel }}</span>
                 {{- end -}}
             </div>
             {{- end }}

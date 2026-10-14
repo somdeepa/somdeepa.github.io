@@ -19,13 +19,13 @@
     {{- $paperLink = $page.RelPermalink -}}
 {{- end -}}
 
-{{- if $page.Params.slideLink -}}
+{{- if and $page.Params.slideLink ($page.Params.showSlides | default true) -}}
     {{- if or (hasPrefix $page.Params.slideLink "http://") (hasPrefix $page.Params.slideLink "https://") (hasPrefix $page.Params.slideLink "/") -}}
         {{- $slidesLink = $page.Params.slideLink -}}
     {{- else -}}
         {{- $slidesLink = printf "%s%s" $page.RelPermalink $page.Params.slideLink -}}
     {{- end -}}
-{{- else if $slidesResource -}}
+{{- else if and $slidesResource ($page.Params.showSlides | default true) -}}
     {{- $slidesLink = $slidesResource.RelPermalink -}}
 {{- end -}}
 

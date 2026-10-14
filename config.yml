@@ -92,8 +92,11 @@ params:
         jobMarketPaper:
             title: "Science under collective bargaining: How unionization shapes academic labor markets and research productivity"
             url:
+            paperLabel: Paper
+            paperUrl: research/unionization-universities/paper.pdf
             slidesLabel: Slides
             slidesUrl: research/unionization-universities/slides.pdf
+            showSlides: false
         imageUrl: "picture.jpg"
         imageWidth: 360
         imageTitle: Somdeepa Das

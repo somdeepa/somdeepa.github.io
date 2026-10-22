@@ -9,7 +9,7 @@ description: "About Somdeepa Das."
 
   <p>My name is pronounced Shom-dee-pa Das (সোমদীপা দাস).</p>
 
-  <p>I am married to Angshuman Pal, who works in operations research. <a href="https://sites.google.com/view/angshumanpal">His website is here.</a></p>
+  <p>I am married to <a href="https://sites.google.com/view/angshumanpal">Angshuman Pal</a>, who is a Ph.D. candidate in Operations Management at Indiana University Bloomington.</p>
 
   <p>Outside of economics, I enjoy distance running and reading. I am currently training for my first half marathon. I read broadly across genres, from historical romance and science fiction, to literary fiction and nonfiction on history, culture, and social institutions.</p>
 </div>

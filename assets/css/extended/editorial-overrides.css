@@ -6,9 +6,60 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Instrument Sans', sans-serif;
     font-weight: 500;
     letter-spacing: -0.01em;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.post-content,
+.post-content p,
+.post-content li,
+.post-content dd,
+.post-content dt,
+.entry-content,
+.profile-lead,
+.profile-fields,
+.profile-agenda {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.post-content .about-intro,
+.post-content .about-contact-card dd,
+.post-content .about-contact-card dt {
+    font-size: var(--textsize);
+}
+
+button,
+.button,
+.button-inner,
+.entry-action,
+.teaching-button,
+.pagination a,
+.profile-jmp-label {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.nav,
+.nav a,
+.logo,
+.logo a,
+#menu,
+#menu a,
+.logo-switches,
+.lang-switch a {
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.logo a {
+    font-size: var(--headersize);
+}
+
+.research-entry .entry-header h2 {
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .profile .profile_inner {
@@ -48,6 +99,10 @@ h6 {
     width: 100%;
     min-height: 100%;
     text-align: center;
+}
+
+.profile-fields + .profile-agenda {
+    margin-top: -16px;
 }
 
 .profile .profile_inner h1 {

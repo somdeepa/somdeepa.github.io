@@ -453,17 +453,47 @@ button,
     color: var(--secondary);
 }
 
-.post-content .about-intro {
+.post-content .about-overview {
     display: grid;
-    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
+    grid-template-areas:
+        "intro photo";
+    align-items: start;
+    gap: clamp(24px, 4vw, 44px);
     margin-bottom: var(--gap);
+}
+
+.post-content .about-intro {
+    grid-area: intro;
+    display: grid;
+    align-self: center;
+    gap: 14px;
+    margin-bottom: 0;
 }
 
 .post-content .about-intro p {
     margin: 0;
 }
 
+.post-content .about-photo {
+    grid-area: photo;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.post-content .about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border: 2px solid #1f1f1b;
+    border-radius: 14px;
+    box-shadow: 8px 8px 0 var(--accent), 0 14px 34px rgba(31, 31, 27, 0.08);
+}
+
 .post-content .about-contact-card {
+    width: 100%;
     margin: 0 0 var(--gap);
     padding: var(--gap);
     background: #fffdfa;
@@ -500,6 +530,16 @@ button,
 }
 
 @media screen and (max-width: 768px) {
+    .post-content .about-overview {
+        grid-template-columns: 1fr;
+        grid-template-areas: "intro" "photo";
+        gap: 24px;
+    }
+
+    .post-content .about-photo {
+        width: min(100%, 360px);
+    }
+
     .profile .profile_inner {
         grid-template-columns: 1fr;
         gap: 16px;
